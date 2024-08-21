@@ -39,6 +39,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_subtitle">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_total"
             android:hint="Digite valor total da conta"
             android:layout_width="match_parent"
             android:inputType="numberDecimal"
@@ -57,6 +58,7 @@
         app:layout_constraintTop_toBottomOf="@+id/til_total">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_people"
             android:hint="Digite o número de pessoas"
             android:layout_width="match_parent"
             android:maxLength="2"
