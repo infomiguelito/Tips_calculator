@@ -48,25 +48,19 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
+    <Spinner
         android:layout_margin="16dp"
-        android:id="@+id/til_people"
+        android:id="@+id/spiner_people"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/til_total">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tie_people"
-            android:hint="Digite o número de pessoas"
-            android:layout_width="match_parent"
-            android:maxLength="2"
-            android:inputType="number"
-            android:layout_height="wrap_content"/>
+        app:layout_constraintTop_toBottomOf="@+id/til_total"/>
 
 
-    </com.google.android.material.textfield.TextInputLayout>
+
+
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/vertical_guideline"
@@ -82,9 +76,9 @@
         android:layout_margin="16dp"
         android:orientation="horizontal"
         android:gravity="center_horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/til_people"
-        app:layout_constraintStart_toStartOf="@+id/til_people"
-        app:layout_constraintTop_toBottomOf="@+id/til_people">
+        app:layout_constraintEnd_toEndOf="@+id/spiner_people"
+        app:layout_constraintStart_toStartOf="@+id/spiner_people"
+        app:layout_constraintTop_toBottomOf="@+id/spiner_people">
 
         <RadioButton
             android:id="@+id/rb_options_one"
@@ -128,6 +122,17 @@
         app:layout_constraintEnd_toEndOf="@+id/til_people"
         app:layout_constraintStart_toStartOf="@+id/vertical_guideline"
         app:layout_constraintTop_toBottomOf="@+id/rg_percentage" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_margin="16dp"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_clean"
+        tools:text="58.93" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
