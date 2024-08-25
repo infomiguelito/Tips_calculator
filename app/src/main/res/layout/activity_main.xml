@@ -109,7 +109,7 @@
         android:layout_marginTop="16dp"
         android:id="@+id/btn_clean"
         app:layout_constraintEnd_toEndOf="@+id/vertical_guideline"
-        app:layout_constraintStart_toStartOf="@+id/til_people"
+        app:layout_constraintStart_toStartOf="@+id/spiner_people"
         app:layout_constraintTop_toBottomOf="@+id/rg_percentage" />
 
     <Button
@@ -119,20 +119,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Calcular"
-        app:layout_constraintEnd_toEndOf="@+id/til_people"
+        app:layout_constraintEnd_toEndOf="@+id/spiner_people"
         app:layout_constraintStart_toStartOf="@+id/vertical_guideline"
         app:layout_constraintTop_toBottomOf="@+id/rg_percentage" />
 
-    <TextView
-        android:id="@+id/tv_result"
-        android:layout_margin="16dp"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_clean"
-        tools:text="58.93" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
