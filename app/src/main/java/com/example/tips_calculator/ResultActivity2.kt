@@ -21,7 +21,7 @@ class ResultActivity2 : AppCompatActivity() {
         val percentage = intent.getIntExtra("percentage", 0)
         val totaltips = intent.getFloatExtra("totaltips",0f)
 
-        binding.tvPercentage.text = percentage.toString()
+        binding.tvPercentage.text = percentage.toString() + "%"
         binding.tvTotalConta.text = total.toString()
         binding.tvPeople.text = people.toString()
         binding.tvTotal.text = totaltips.toString()

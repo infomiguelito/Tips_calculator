@@ -1,16 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Tips_calculator</string>
-    <string-array name="numpeople">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-    </string-array>
+    <string name="summary">Summary</string>
+    <string name="sumary_subtitle">See bellow the summary of you bill</string>
+    <string name="People">People :</string>
+    <string name="percentage">Percentage :</string>
+    <string name="calculate">Fulfill the bellow fields</string>
+    <string name="account_value">Type the table amount :</string>
+    <string name="hint_value_amount">$ 250.00</string>
+    <string name="num_of_people">Num of people :</string>
+    <string name="number_people">7</string>
+    <string name="percentage_label">Percentage of tip :</string>
+    <string name="percentage_hint">10%</string>
+    <string name="clean_button">Clean</string>
+    <string name="calculate_button">Calculate</string>
+    <string name="refresh">Refresh</string>
 </resources>

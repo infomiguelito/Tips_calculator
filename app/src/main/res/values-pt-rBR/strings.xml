@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calculadora Gorjeta</string>
+    <string name="summary">Resumo</string>
+    <string name="sumary_subtitle">Segue abaixo o resumo da conta</string>
+    <string name="People">Pessoas :</string>
+    <string name="percentage">Porcentagem :</string>
+    <string name="calculate">Informe os dados abaixo para calcular a conta</string>
+    <string name="account_value">Digite o valor da conta :</string>
+    <string name="hint_value_amount">ex: R$250.00</string>
+    <string name="num_of_people">Digite o número de pessoas :</string>
+    <string name="number_people">ex: 7</string>
+    <string name="percentage_label">Digite a porcentagem :</string>
+    <string name="percentage_hint">ex: 10%</string>
+    <string name="clean_button">Limpar</string>
+    <string name="calculate_button">Calcular</string>
+    <string name="refresh">Refazer</string>
+</resources>
