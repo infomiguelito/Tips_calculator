@@ -23,78 +23,37 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        var percentage: Int = 0
-        binding.rbOptionsOne.setOnCheckedChangeListener { _, isCheked ->
-            println("miguel one $isCheked")
-            if (isCheked) {
-                percentage = 10
-            }
-        }
-
-        binding.rbOptionsTwo.setOnCheckedChangeListener { _, isCheked ->
-            println("miguel two $isCheked")
-            if (isCheked) {
-                percentage = 15
-            }
-        }
-
-        binding.rbOptionsThree.setOnCheckedChangeListener { _, isCheked ->
-            println("miguel three $isCheked")
-            if (isCheked) {
-                percentage = 20
-            }
-        }
-        var numbOfPeopleSelect = 0
-        binding.spinerPeople.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                p0: AdapterView<*>?,
-                p1: View?,
-                p2: Int,
-                p3: Long
-            ) {
-                numbOfPeopleSelect = p2
-
-            }
-
-            override fun onNothingSelected(p0: AdapterView<*>?) {
-
-            }
-        }
 
 
-        val adapter = ArrayAdapter.createFromResource(
-            this,
-            R.array.numpeople,
-            android.R.layout.simple_spinner_item
-        )
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        binding.spinerPeople.adapter = adapter
-
-
-        binding.btnCalculator.setOnClickListener {
+        binding.btnCalculator.setOnClickListener()
+        {
 
 
             val totalTemp = binding.tieTotal.text
+            val numbOfPeopletemp = binding.tiePeopleLabel.text
+            val percentage_temp = binding.tiePercentageLabel.text
 
-            if (totalTemp?.isEmpty() == true) {
+            if (totalTemp?.isEmpty() == true ||
+                numbOfPeopletemp?.isEmpty() == true ||
+                percentage_temp?.isEmpty() == true ) {
                 Snackbar.make(binding.tieTotal, "Preencha todos os campos", Snackbar.LENGTH_LONG)
                     .show()
             } else {
                 val total: Float = totalTemp.toString().toFloat()
-                val people: Int = numbOfPeopleSelect
-
+                val people: Int = numbOfPeopletemp.toString().toInt()
+                val percentage : Int = percentage_temp.toString().toInt()
                 val Temp = total / people
-                val tips = Temp * percentage / 100
+                val tips = Temp *  percentage / 100
                 val totaltips = Temp + tips
 
-                val intent = Intent(this,ResultActivity2::class.java)
+                val intent = Intent(this, ResultActivity2::class.java)
                 intent.apply {
                     putExtra("total", total)
                     putExtra("people", people)
                     putExtra("percentage", percentage)
                     putExtra("totaltips", totaltips)
                 }
+                clean()
                 startActivity(intent)
 
             }
@@ -103,17 +62,27 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        binding.btnClean.setOnClickListener {
-
-            binding.tieTotal.setText("")
-            binding.rbOptionsOne.isChecked = false
-            binding.rbOptionsTwo.isChecked = false
-            binding.rbOptionsThree.isChecked = false
+        binding.btnClean.setOnClickListener()
+        {
+            clean()
         }
+
+    }
+
+    private fun clean() {
+        binding.tieTotal.setText("")
+        binding.tiePeopleLabel.setText("")
+        binding.tiePercentageLabel.setText("")
 
 
     }
 }
+
+
+
+
+
+
 
 
 

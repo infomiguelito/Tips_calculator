@@ -7,4 +7,119 @@
     android:layout_height="match_parent"
     tools:context=".ResultActivity2">
 
+    <TextView
+        android:id="@+id/tv_resumo_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Resumo"
+        style="@style/Title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_total_conta_label"
+        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total  : "
+        app:layout_constraintStart_toStartOf="@+id/tv_resumo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resumo" />
+
+    <TextView
+        android:id="@+id/tv_resumo"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Segue abaixo o resumo da conta "
+        app:layout_constraintStart_toStartOf="@+id/tv_resumo_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resumo_label" />
+
+    <TextView
+        android:id="@+id/tv_total_conta"
+        android:layout_width="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_height="wrap_content"
+        tools:text="345"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_total_conta_label" />
+
+    <TextView
+        android:id="@+id/tv_people_label"
+        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pessoas :"
+        app:layout_constraintStart_toStartOf="@+id/tv_total_conta_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_total_conta_label" />
+
+    <TextView
+        android:id="@+id/tv_people"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="5"
+        app:layout_constraintEnd_toEndOf="@+id/tv_total_conta"
+        app:layout_constraintTop_toTopOf="@+id/tv_people_label" />
+
+    <TextView
+        android:id="@+id/tv_percentage_label"
+        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Porcentagem : "
+        app:layout_constraintStart_toStartOf="@+id/tv_people_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_people_label" />
+
+    <TextView
+        android:id="@+id/tv_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="15%"
+        app:layout_constraintEnd_toEndOf="@+id/tv_people"
+        app:layout_constraintTop_toTopOf="@+id/tv_percentage_label" />
+
+    <View
+        android:id="@+id/View"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_percentage_label" />
+
+    <TextView
+        android:id="@+id/tv_total_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="TOTAL :"
+        app:layout_constraintStart_toStartOf="@+id/View"
+        app:layout_constraintTop_toBottomOf="@+id/View" />
+
+    <TextView
+        android:id="@+id/tv_total"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="54,45"
+        app:layout_constraintEnd_toEndOf="@+id/View"
+        app:layout_constraintTop_toTopOf="@+id/tv_total_label" />
+
+    <Button
+        android:id="@+id/btn_voltar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:text="Refazer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
